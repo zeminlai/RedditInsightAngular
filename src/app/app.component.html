@@ -1,9 +1,12 @@
 
 <div class="flex flex-column align-items-center">
-  <div class="sm:w-12 md:w-10 lg:w-7 flex flex-column align-items-center">
-    <div class="grid mt-5 mb-5 flex align-items-center justify-content-center lg:w-6 sm:w-12">
+  <div class="w-12 md:w-10 lg:w-7 flex flex-column align-items-center">
+    <h1 class="mt-6">RedditInsight</h1>
+    <div class="grid mb-5 flex align-items-center justify-content-center lg:w-6 sm:w-12">
         <input type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">
-      <p-button label="Search" class="lg:col-4 sm:col-2" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></p-button>
+      <!-- <p-button label="Search" class="lg:col-4 sm:col-2" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></p-button> -->
+      <div class="p-12 lg:p-1 h-5rem lg:h-1rem"></div>
+      <button pButton pRipple label="Search" class="p-button-primary lg:col-3 col-8" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></button>
     </div>
 
     <!-- <div class="m-5 lg:w-10 sm:w-12">
@@ -72,9 +75,9 @@
       </div>
     </div> -->
 
-    <div *ngIf="allRedditPosts" class="sm:w-12">
-      <div class="m-5 lg:w-10 sm:w-12 mx-auto" *ngFor="let redditPost of allRedditPosts">
-        <p-card class="" [style]="{ width: '100%' }">
+    <div *ngIf="allRedditPosts" class="lg:w-10 w-12 reddit-post-container">
+      <div class="mx-auto" *ngFor="let redditPost of allRedditPosts">
+        <p-card class="m-5" [style]="{ width: '100%' }">
           <ng-template pTemplate="header">
             <h1 class="pt-3 pl-3 m-0">r/{{redditPost.subreddit}}</h1>
             <p-divider></p-divider>
@@ -117,7 +120,7 @@
       No results found...
     </div>
 
-    <div *ngIf="!allRedditPosts && loading" class="m-5 lg:w-10 sm:w-12">
+    <div *ngIf="!allRedditPosts && loading" class="m-5 lg:w-10 w-12">
       <div *ngFor="let _ of [].constructor(5)">
         <p-card class="m-5">
           <div class="pt-3">
