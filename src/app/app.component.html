@@ -1,80 +1,15 @@
 
 <div class="flex flex-column align-items-center">
-  <p-toast></p-toast>
+  <p-toast [breakpoints]="{'500px': {width: '100%', right: '0', left: '0'}}"></p-toast>
   <div class="w-12 md:w-10 lg:w-7 flex flex-column align-items-center">
-    <h1 class="mt-6">RedditInsight</h1>
+    <h1 class="mt-6 mb-0 sm:text-5xl">RedditInsight</h1>
+    <p class="text-300 mt-0 mb-5 text-xs sm:text-sm w-15rem sm:w-25rem text-center ">Unlock Reddit's best content effortlessly, leveraging Google's search engine</p>
     <div class="grid mb-5 align-items-center justify-content-center lg:w-6 sm:w-12">
         <input (keyup.enter)="searchTerm && getRedditInsightResults(searchTerm)" type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">
       <!-- <p-button label="Search" class="lg:col-4 sm:col-2" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></p-button> -->
       <div class="p-12 lg:p-1 h-5rem lg:h-1rem"></div>
       <button pButton pRipple label="Search" class="p-button-primary lg:col-3 col-8" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></button>
     </div>
-
-    <!-- <div class="m-5 lg:w-10 sm:w-12">
-      <p-card header="what is the best backend?" subheader="u/hello" class="" [style]="{ width: '100%' }">
-        <p class="card-text m-3" style="white-space: pre-wrap">loremg ipsdfasdfk</p>
-
-        <div class="mx-1 my-2">
-          <div class="border-round px-3 py-0  " [style]="{ width: '100%', border: 'solid var(--bluegray-900)'}">
-            <p class="card-title" style="white-space: pre-wrap">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-              Why do we use it?
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            <p class="card-subtitle text-300">u/slashne</p>
-          </div>
-        </div>
-        <div class="mx-1 my-2">
-          <p-card class="py-0" [style]="{ width: '100%', border: 'solid var(--bluegray-900)'}" [ngStyle]="{backgroundColor:'var(--surface-600)'}">
-            <p class="card-title mx-1" style="white-space: pre-wrap">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-              Why do we use it?
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            <p class="card-subtitle mx-1 text-300">u/slashne</p>
-          </p-card>
-        </div>
-      </p-card>
-    </div> -->
-
-    <!-- <div>
-      <div class="m-5 lg:w-10 sm:w-12 mx-auto">
-        <p-card class="" [style]="{ width: '100%' }">
-          <ng-template pTemplate="header">
-            <h1 class="pt-3 pl-3 m-0">r/dotnet</h1>
-            <p-divider></p-divider>
-            <div class="pl-3 flex flex-row align-items-start justify-content-start gap-3 ">
-              <div class="flex flex-column gap-2 align-items-center">
-                <i class="pi pi-caret-up"></i>
-                <p class="text-xs m-0">32</p>
-                <i class="pi pi-caret-down"></i>
-              </div>
-              <div class="flex flex-column">
-                <p class="card-subtitle text-300 m-0 text-xs">u/slashne</p>
-                <h2 class="m-0">helllo</h2>
-              </div>
-            </div>
-          </ng-template>
-          
-          <p class="card-text ml-5 mt-0" style="white-space: pre-wrap">loremg ipsdfasdfk</p>
-  
-          <div class="ml-3 mr-1 my-2">
-            <div class="border-round px-3 py-0" [style]="{ width: '100%', border: 'solid var(--bluegray-900)'}">
-              <p class="card-subtitle text-300 text-xs">u/slashne</p>
-              <p class="card-title" style="white-space: pre-wrap">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  
-                Why do we use it?
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-              <div class="flex flex-row gap-1 align-items-center mb-3">
-                <i class="pi pi-caret-up"></i>
-                <p class="text-xs m-0">23</p>
-                <i class="pi pi-caret-down"></i>
-              </div>
-            </div>
-          </div>
-
-          
-        </p-card>
-      </div>
-    </div> -->
 
     <div *ngIf="allRedditPosts" class="lg:w-10 w-12 reddit-post-container">
       <div class="mx-auto" *ngFor="let redditPost of allRedditPosts">
@@ -89,8 +24,11 @@
                 <i class="pi pi-caret-down"></i>
               </div>
               <div class="flex flex-column">
-                <p class="card-subtitle text-300 m-0 text-xs">u/{{redditPost.author}}</p>
-                <p *ngIf="redditPost.createdAt" class="card-subtitle text-300 m-0 text-xs">{{convertToTimeAgo(redditPost.createdAt.toString()) | timeAgo}}</p>
+                <div class="flex flex-row gap-2">
+                  <p class="card-subtitle text-300 m-0 text-xs">u/{{redditPost.author}}</p>
+                  <p class="card-subtitle text-300 m-0 text-xs">-</p>
+                  <p *ngIf="redditPost.createdAt" class="card-subtitle text-300 m-0 text-xs">{{convertToTimeAgo(redditPost.createdAt.toString()) | timeAgo}}</p>
+                </div>
                 <h2 class="m-0 mr-1 text-white"><a class="text-white no-underline hover:text-primary" href={{redditPost.link}}>{{redditPost.title}}</a></h2>
               </div>
             </div>
@@ -118,11 +56,6 @@
           </div>
 
         </p-card>
-        <!-- <h2 class="card-title m-3">{{redditPost.title}}</h2>
-        <h4 class="card-subtitle m-3">{{redditPost.subReddit}}</h4>
-        <p class="card-text m-3" style="white-space: pre-wrap">{{redditPost.body}}</p> -->
-
-
       </div>
     </div>
 
