@@ -33,7 +33,7 @@ export class RedditInsightService {
     // }
     const options = { params: new HttpParams().set('searchTerm', searchTerm) }
     return this.http.get<GetRedditInsightResultsDto>(
-      `${environment.apiUrl}/${this.url}`, options
+      `${environment.apiUrlProduction}/${this.url}`, options
     )
   }
 }

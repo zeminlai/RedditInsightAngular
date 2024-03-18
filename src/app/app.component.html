@@ -1,9 +1,10 @@
 
 <div class="flex flex-column align-items-center">
+  <p-toast></p-toast>
   <div class="w-12 md:w-10 lg:w-7 flex flex-column align-items-center">
     <h1 class="mt-6">RedditInsight</h1>
-    <div class="grid mb-5 flex align-items-center justify-content-center lg:w-6 sm:w-12">
-        <input type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">
+    <div class="grid mb-5 align-items-center justify-content-center lg:w-6 sm:w-12">
+        <input (keyup.enter)="searchTerm && getRedditInsightResults(searchTerm)" type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">
       <!-- <p-button label="Search" class="lg:col-4 sm:col-2" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></p-button> -->
       <div class="p-12 lg:p-1 h-5rem lg:h-1rem"></div>
       <button pButton pRipple label="Search" class="p-button-primary lg:col-3 col-8" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></button>
@@ -89,16 +90,25 @@
               </div>
               <div class="flex flex-column">
                 <p class="card-subtitle text-300 m-0 text-xs">u/{{redditPost.author}}</p>
-                <h2 class="m-0">{{redditPost.title}}</h2>
+                <p *ngIf="redditPost.createdAt" class="card-subtitle text-300 m-0 text-xs">{{convertToTimeAgo(redditPost.createdAt.toString()) | timeAgo}}</p>
+                <h2 class="m-0 mr-1 text-white"><a class="text-white no-underline hover:text-primary" href={{redditPost.link}}>{{redditPost.title}}</a></h2>
               </div>
             </div>
           </ng-template>
-          <p class="card-text ml-5 mt-0" style="white-space: pre-wrap">{{redditPost.body.toString()}}</p>
+          <p class="card-text ml-5 mt-0" style="white-space: pre-wrap;word-wrap: break-word">
+            <markdown>
+              {{redditPost.body.toString()}}
+            </markdown>
+          </p>
 
           <div class="ml-3 mr-1 my-3" *ngFor="let comment of redditPost.comments">
             <div class="border-round px-3 py-0  " [style]="{ width: '100%', border: 'solid var(--bluegray-900)'}">
               <p class="card-subtitle text-300 text-xs">u/{{comment.author.toString()}}</p>
-              <p class="card-title" style="white-space: pre-wrap; word-wrap: break-word">{{comment.body.toString()}}</p>
+              <p class="card-title" style="white-space: pre-wrap; word-wrap: break-word">
+                <markdown>
+                  {{comment.body.toString()}}
+                </markdown>
+              </p>
               <div class="flex flex-row gap-1 align-items-center mb-3">
                 <i class="pi pi-caret-up"></i>
                 <p class="text-xs m-0">{{comment.upvotes}}</p>

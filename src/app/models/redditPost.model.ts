@@ -7,5 +7,6 @@ export class RedditPost {
     createdAt?: Date;
     title: string = '';
     body: string = '';
+    link: string = '';
     comments: RedditComment[] = [];
 }
