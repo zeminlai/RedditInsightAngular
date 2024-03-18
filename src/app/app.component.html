@@ -2,7 +2,7 @@
 <div class="flex flex-column align-items-center">
   <p-toast [breakpoints]="{'500px': {width: '100%', right: '0', left: '0'}}"></p-toast>
   <div class="w-12 md:w-10 lg:w-7 flex flex-column align-items-center">
-    <h1 class="mt-6 mb-0 sm:text-5xl">RedditInsight</h1>
+    <h1 class="title mt-6 mb-0 sm:text-5xl">RedditInsight</h1>
     <p class="text-300 mt-0 mb-5 text-xs sm:text-sm w-15rem sm:w-25rem text-center ">Unlock Reddit's best content effortlessly, leveraging Google's search engine</p>
     <div class="grid mb-5 align-items-center justify-content-center lg:w-6 sm:w-12">
         <input (keyup.enter)="searchTerm && getRedditInsightResults(searchTerm)" type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">

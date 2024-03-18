@@ -7,16 +7,12 @@
 } 
 
 body {
-    /* diameter of the circle */
-    --d: 4px; 
+ }
+
+ .title{
+    background: #E3FAF1;
+    background: linear-gradient(to bottom right, #E3FAF1 0%, #94C1FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
-    background : radial-gradient(
-      circle at 
-         var(--d) 
-         var(--d), 
-         
-      #000000 calc(var(--d) - 1px), 
-      #0000 var(--d)
-    ) 
-    0 0 / 50px 50px;
  }
