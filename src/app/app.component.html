@@ -5,7 +5,7 @@
     <h1 class="title mt-6 mb-0 sm:text-5xl">RedditInsight</h1>
     <p class="text-400 mt-0 mb-5 text-xs sm:text-sm w-15rem sm:w-25rem text-center ">Unlock Reddit's best content effortlessly, leveraging Google's search engine</p>
     <div class="grid mb-5 align-items-center justify-content-center lg:w-6 sm:w-8">
-        <input (keyup.enter)="searchTerm && getRedditInsightResults(searchTerm)" type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm">
+        <input (keyup.enter)="searchTerm && getRedditInsightResults(searchTerm)" type="text" class="col-8 h-3rem" pInputText [(ngModel)]="searchTerm" placeholder="eg: best cars, recommended laptops">
       <!-- <p-button label="Search" class="lg:col-4 sm:col-2" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></p-button> -->
       <div class="p-12 lg:p-1 h-5rem lg:h-1rem"></div>
       <button pButton pRipple label="Search" class="p-button-primary lg:col-3 col-8" [loading]="loading" (click)="searchTerm && getRedditInsightResults(searchTerm)"></button>
@@ -64,7 +64,7 @@
     </div>
 
     <div *ngIf="!allRedditPosts && loading" class="m-5 lg:w-10 w-12">
-      <div *ngFor="let _ of [].constructor(5)">
+      <div *ngFor="let _ of [].constructor(10)">
         <p-card class="m-5">
           <div class="pt-3">
             <p-skeleton height="2rem" width="50%" styleClass="mb-3"></p-skeleton>

@@ -16,3 +16,9 @@ body {
     -webkit-text-fill-color: transparent;
     
  }
+
+ ::placeholder {
+    color: white;
+    opacity: 0.2; /* Firefox */
+    
+  }
