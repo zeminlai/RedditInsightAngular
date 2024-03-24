@@ -19,5 +19,5 @@
 3. Read up on best matched Reddit posts on that topic  
 
 ##  Frontend Notes
-[Backend API Notes](https://github.com/zeminlai/RedditInsightAPI)
+[Backend API Notes](https://github.com/zeminlai/RedditInsightAPI)\
 The frontend is built using Angular 17 along with PrimeNg for styling.
