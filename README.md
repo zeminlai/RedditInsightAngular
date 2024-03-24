@@ -1,27 +1,23 @@
-# RedditInsightAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+<h1 align="center">
+  <br>
+  <a href="https://redditinsight.pro"><img src="https://github.com/zeminlai/RedditInsightAngular/assets/106502102/b4189a27-16bc-499b-896d-d2bcce315639" alt="Markdownify" width="1000"></a>
 
-## Development server
+</h1>
+<h4 align="center">A superior way to search Reddit</h4>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<p align="center">
+<img align="center" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+<img align="center" alt="Angular" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
+<img align="center" alt="C#" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg" />
+<img align="center" alt=".Net Core" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg" />
+</p>
 
-## Code scaffolding
+##  Usage
+1. Try it out at [redditinsight.pro](https://redditinsight.pro/)!
+2. Enter in your search term 
+3. Read up on best matched Reddit posts on that topic  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##  Frontend Notes
+[Backend API Notes](https://github.com/zeminlai/RedditInsightAPI)\
+The frontend is built using Angular 17 along with PrimeNg for styling.
