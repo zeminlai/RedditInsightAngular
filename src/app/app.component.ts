@@ -30,8 +30,7 @@ export class AppComponent {
   }
 
   ngOnInit(): void{
-    console.log(this.now)
-    
+
   }
 
   getRedditInsightResults(searchTerm: string): void {
@@ -39,7 +38,6 @@ export class AppComponent {
     this.showLoadingToast();
     this.redditInsightService.getRedditInsightResults(searchTerm)
       .subscribe((result: GetRedditInsightResultsDto) => {
-        console.log(result);
         this.allRedditPosts = result.redditPosts;
         this.loading = false;
         this.closeLoadingToast();
