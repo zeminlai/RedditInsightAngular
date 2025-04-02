@@ -14,7 +14,7 @@
 </p>
 
 ##  Usage
-1. Try it out at [redditinsight.netlify.app](https://redditinsight.netlify.app/)!
+1. Try it out at [redditinsight.my](https://redditinsight.my/)!
 2. Enter in your search term 
 3. Read up on best matched Reddit posts on that topic  
 
